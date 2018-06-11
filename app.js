@@ -15,7 +15,13 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render('index', { list: ['a', 'b', 'c'], title: 'CrazyApp' });
+  res.render(
+    'index',
+    {
+      nav: ['Books', 'Authors'],
+      title: 'CrazyApp'
+    }
+  );
 });
 
 app.listen(port, () => {
